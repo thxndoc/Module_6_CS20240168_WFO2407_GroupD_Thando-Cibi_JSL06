@@ -48,13 +48,15 @@ function addToOrder(itemName) {
     orderItems.appendChild(orderListItems);
     // Calculate and update the total price
     function updateTotalPrice(price) {
-        let total = 0
+        let total = 0;
         return function() {
             total += price;
             return total.toFixed(2);
         } 
-    }
-    const newTotal = updateTotalPrice(60);
+    };
+    
+    const itemPrice = 60;
+    const newTotal = updateTotalPrice(itemPrice);
     //console.log(newTotal()); //remember to call the function
     // Update the text content of the order total element with the new total
     orderTotal.textContent = newTotal();
