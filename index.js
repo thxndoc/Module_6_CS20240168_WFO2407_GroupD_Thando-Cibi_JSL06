@@ -14,11 +14,11 @@ function displayMenuItems(menu) {
         // Create an element to represent the category
         const categoryElement = document.createElement("h3");
         // Set the text content of the category element to the category name
-
+        categoryElement.textContent = category;
         // Append the category element to the menu container
-
+        
         // Create an element to represent a list of items
-
+        
         // Append a list of items element to the menu container
         
         // Loop through the items in the category and create list items
