@@ -4,12 +4,10 @@
 * Display different categories of food items and allow users to add items to their order with a click.
 * Update total price as user adds item to order.
 
-
 ## What I learned
 I learned that placing the closure inside the addToOrder function caused the total to reset to zero with each click. Every time the addToOrder function was called (when I click on a list item), the updateTotalPrice function was redefined, which meant the total started at zero again. As a result, the total only incremented by 60 and didn't continue to increase as expected. 
 
 A solution to this was to place the closure outside the addToOrder function. This ensured that the newTotal function remembers the total variable.
-
 
 ## Challenges
 After creating the closure, I set textContent to newTotal, as I was used to assigning variable names to textContent. Because of this, the number appeared in the console but didn’t display on the webpage(the function itself would appear). With the help of my coach, I learned that I needed to call newTotal as a function, not just assign it as a variable.
@@ -19,7 +17,6 @@ After creating the closure, I set textContent to newTotal, as I was used to assi
 ```JavaScript
     orderTotal.textContent = newTotal(); //This is what I was supposed to do
 ```
-
 
 ## [JSL06] Submission: CodeCuisine Menu Display System Challenge
 
