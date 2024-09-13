@@ -28,8 +28,9 @@ function displayMenuItems(menu) {
             // Set the text content of the list item element to the item name
             listItems.textContent = item;
             // Attach a click event listener to the list item to add it to the order
-
+            listItems.addEventListener("click", addToOrder(itemName));
             // Append the list item to the list of items
+            list.appendChild(listItems);
         });
     }
 }
@@ -37,11 +38,12 @@ function displayMenuItems(menu) {
 // Callback function for adding an item to the order
 function addToOrder(itemName) {
     // Get the order items list and the order total element from the HTML
-
+    const orderItems = document.getElementById("order-items");
+    const orderTotal = document.getElementById("order-total");
     // Create a list item for the order
-
+    const orderListItems = document.createElement("li");
     // Set the text content of the list item to the item name
-
+    orderListItems.textContent = itemName;
     // Append the list item to the order items list
 
     // Calculate and update the total price
