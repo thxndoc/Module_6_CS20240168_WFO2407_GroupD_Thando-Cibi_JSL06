@@ -52,13 +52,13 @@ function addToOrder(itemName) {
         return function() {
             total += price;
             return total.toFixed(2);
-        }  
+        } 
     }
     const newTotal = totalPrice(60);
-    console.log(newTotal()); //remember to call the function
+    //console.log(newTotal()); //remember to call the function
     // Update the text content of the order total element with the new total
+    orderTotal.textContent = newTotal();
 }
-
 // Function to initialize the menu system
 function initMenuSystem(menu) {
     // Call the function to display menu items
