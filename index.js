@@ -28,7 +28,7 @@ function displayMenuItems(menu) {
             // Set the text content of the list item element to the item name
             listItems.textContent = item;
             // Attach a click event listener to the list item to add it to the order
-            listItems.addEventListener("click", addToOrder(item));
+            listItems.addEventListener("click", () => addToOrder(item));
             // Append the list item to the list of items
             list.appendChild(listItems);
         });
