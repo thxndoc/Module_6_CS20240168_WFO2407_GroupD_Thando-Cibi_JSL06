@@ -10,7 +10,7 @@ function displayMenuItems(menu) {
     // Get the menu container element from the HTML
     const menuContainer = document.getElementById("menu");
     // Loop through each category and its items in the menu object
-    
+    for (const [category, items] of Object.entries(menu)) {
         // Create an element to represent the category
 
         // Set the text content of the category element to the category name
@@ -20,9 +20,9 @@ function displayMenuItems(menu) {
         // Create an element to represent a list of items
 
         // Append a list of items element to the menu container
-
+        
         // Loop through the items in the category and create list items
-
+        items.forEach(item => {
             // Create a list item element
 
             // Set the text content of the list item element to the item name
@@ -30,8 +30,8 @@ function displayMenuItems(menu) {
             // Attach a click event listener to the list item to add it to the order
 
             // Append the list item to the list of items
-
-            
+        });
+    }
 }
 
 // Callback function for adding an item to the order
