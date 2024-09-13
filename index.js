@@ -35,6 +35,18 @@ function displayMenuItems(menu) {
     }
 }
 
+ // Calculate and update the total price
+function updateTotalPrice(price) {
+    let total = 0;
+    return function() {
+        total += price;
+        return total.toFixed(2);
+    } 
+};
+
+const itemPrice = 60;
+const newTotal = updateTotalPrice(itemPrice);
+
 // Callback function for adding an item to the order
 function addToOrder(itemName) {
     // Get the order items list and the order total element from the HTML
@@ -46,17 +58,6 @@ function addToOrder(itemName) {
     orderListItems.textContent = itemName;
     // Append the list item to the order items list
     orderItems.appendChild(orderListItems);
-    // Calculate and update the total price
-    function updateTotalPrice(price) {
-        let total = 0;
-        return function() {
-            total += price;
-            return total.toFixed(2);
-        } 
-    };
-    
-    const itemPrice = 60;
-    const newTotal = updateTotalPrice(itemPrice);
     //console.log(newTotal()); //remember to call the function
     // Update the text content of the order total element with the new total
     orderTotal.textContent = newTotal();
