@@ -1,4 +1,10 @@
-# [JSL06] Submission: CodeCuisine Menu Display System Challenge
+# Project Overview
+
+* Build a simple menu display system for a fictional UberEats restaurant called "CodeCuisine".
+* Display different categories of food items and allow users to add items to their order with a click.
+* Update total price as user adds item to order.
+
+## [JSL06] Submission: CodeCuisine Menu Display System Challenge
 
 You will:
 1. Use the provided Starter Code Repository: https://github.com/CodeSpace-Academy/Module_6_StudentNo_Classcode_Group_Name-Surname_JSL06
